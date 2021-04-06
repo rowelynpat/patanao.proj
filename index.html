@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">	
+</head>
+<body style ="background-image">
+	<center>
+	<div class="style">
+	<div class="container">
+	<label class="mytext">Fullname</label>
+    <br /><input type="text"id="name" class="info" />
+    <br /><label class="mytext">Age</label>
+    <br /><input type="text"id="age"  class="info" />
+    <br /><label class="mytext">Address</label>
+    <br /><input type="text"id="address"  class="info" />
+    <br /><label class="mytext">Course</label>
+    <br /><input type="text"id="course"  class="info" />
+    <br /><button onclick="display();" class ="Button">Submit</button>
+    <div class="box">
+    <br/><div id="name1" class="res"></div>
+    <br/><div id="age1"  class="res"></div>
+    <br/><div id="address1"  class="res"></div>
+    <br/><div id="course1"  class="res"></div>
+    <br/><div id="age2"  class="res"></div>
+</div>
+</div>
+</div>
+</center>
+    <script type="text/javascript">
+        function display() {
+
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var address = document.getElementById("address").value;
+            var course = document.getElementById("course").value;
+
+            document.getElementById("name1").innerHTML = "Name: " + name;
+            document.getElementById("age1").innerHTML = "Age: " + age;
+            document.getElementById("address1").innerHTML = "Address: " + address;
+            document.getElementById("course1").innerHTML = "Course: " + course;
+            document.getElementById("age2").innerHTML = age;
+
+            if (document.getElementById("age").value == 0 || document.getElementById("age").value <= 12) {
+                document.getElementById("age2").innerHTML = "You are a baby";
+            } else if (document.getElementById("age").value == 1 || document.getElementById("age").value <= 3) {
+                document.getElementById("age2").innerHTML = "You are a toddler";
+            } else if (document.getElementById("age").value == 4 || document.getElementById("age").value <= 12) {
+                document.getElementById("age2").innerHTML = "You are a kid";
+            } else if (document.getElementById("age").value == 13 || document.getElementById("age").value <= 18) {
+                document.getElementById("age2").innerHTML = "You are a teen";
+            } else if (document.getElementById("age").value == 19 || document.getElementById("age").value <= 21) {
+                document.getElementById("age2").innerHTML = "You are a young adult";
+            } else if (document.getElementById("age").value == 22 || document.getElementById("age").value <= 31) {
+                document.getElementById("age2").innerHTML = "You are an adult";
+            } else {
+                document.getElementById("age2").innerHTML = "You are old";
+            }
+
+
+        }
+    </script>
+</body>
+</html>
